@@ -1,0 +1,49 @@
+<!DOCTYPE><html>
+   <head> <style>
+       .wrapper{
+           display:grid;
+           grid-template-columns:100px 100px 100px;
+           grid-template-rows:40px 40px 40px;
+       }
+       .item1{
+           grid-column:1/4;
+           
+       }
+       .item2{
+           grid-column-start:1;
+           grid-column-end:2;
+       }
+       .item3{
+           grid-column-start:2;
+           grid-column-end:4;
+       }
+       .container{
+           padding: 15px,20px;
+           border:1px dashed #ff6c60;
+       }
+       .left{
+           width: 20px;
+           border:5px solid #ddd;
+       }
+       .right{
+           margin-left: 20px;
+           border:5px solid #ddd;
+       }
+       
+   </style></head>
+   <body>
+       <div class="container">
+           <div class="left">left</div>
+           <div class="right">right</div>
+           </div>
+      <div class="container" id="container">
+        <div class="left">
+          左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+        </div>
+        <div class="right">
+          这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+          基本的样式是，两个div相距20px, 左侧div宽 120px
+        </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html><head>
+    <meta >
+    <title>响应式网站开发</title>
+    <style>
+        *{ box-sizing: border-box;}
+        body ul{
+            margin:0;
+        }
+        body{
+            font-family: 'Open Sans',sans-serif;
+        }
+        ul{
+            padding-left:0;
+            }
+            li{
+                list-style: none;
+            }
+        .content{
+            width:95%;
+            min-width:768px;
+            max-width:1366px;
+            margin:0 auto;
+        }
+        header{
+            display:flex;/*弹性盒模型,当且仅当此句子存在下句代码才有作用*/
+            flex-direction: row;
+            justify-content: space-around;
+          /*  background-color: red;*/
+        }
+        header a{
+            display: block;
+            width:250px;
+            height:210px;
+        }
+        header a:nth-child(1){
+            background-image:url("DSC02072.JPG"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header a:nth-child(2){
+            background-image:url("DSC02075.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header a:nth-child(3){
+            background-image:url("DSC02077.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header a:nth-child(4){
+            background-image:url("DSC02078.JPG");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .columns{
+            display: flex;   
+            flex-flow: row wrap;/*当子元素的宽度大于父元素的时候将多余的子元素换行排列*/       
+        }
+        .column{
+            flex:1px;
+            border:2px solid #808080;
+            padding:10px;
+            margin:2px;
+            width:500px;
+        }
+        footer{
+            border:1px solid #808080;
+        }
+        @media screen and (max-width:1080px){/*and之后的空格必须有 当前屏幕小于1080的时候执行，覆盖前面的style*/
+            .column{
+                flex-basis: 40%;
+            }
+            .columns{
+                background-color: blue;
+            }
+        }
+        @media screen and (max-width:768px){
+            .column{
+                flex-basis: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <header>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+</header>
+    <section class="columns" >    
+        <div class="column">
+            <h1>the first</h1>
+            <ul>
+                <li>this is my first web</li>
+                <li>this is my first web</li>
+                <li>this is my first web</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h1>the first</h1>
+            <ul>
+                    <li>this is my first web</li>
+                    <li>this is my first web</li>
+                    <li>this is my first web</li>
+                </ul>
+        </div>
+        <div class="column">
+            <h1>the first</h1>
+            <ul>
+                    <li>this is my first web</li>
+                    <li>this is my first web</li>
+                    <li>this is my first web</li>
+                </ul>
+        </div>
+</section>
+<footer >
+    <div class="columns">
+        <h1>END</h1>
+    </div>
+</footer>
+</div>
+</body>
+</html>
